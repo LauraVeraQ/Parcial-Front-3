@@ -22,7 +22,6 @@ export const Form = () => {
     }
     const handleSubmit = (e)=>{
         e.preventDefault();
-        // console.log('submit', submit);
         if(nombre.length <= 3 || nombre[0] === " "){
             setAlerta(true)
             setMensajeAlerta("Por favor chequea que la información sea correcta")
@@ -33,13 +32,11 @@ export const Form = () => {
             setAlerta(true)
             setMensajeAlerta("Por favor chequea que la información sea correcta")
             setMuestraCard(false)
-            console.log('entrocarrera')
         }
         if (nombre.length > 3 && carrera.length > 6 && nombre[0] !== " ") {
             setAlerta(false)
             setMensajeAlerta("")
             setMuestraCard(true)
-            console.log('entrocorrecto')
         }
     }
   return (
